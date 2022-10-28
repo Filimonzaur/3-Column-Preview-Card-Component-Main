@@ -1,0 +1,94 @@
+/* ### Primary */
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+
+/* ### Neutral */
+$transparentWhite: hsla(0, 0%, 100%, 0.75);/* (paragraphs) */
+$veryLightGray: hsl(0, 0%, 95%);/* (background, headings, buttons) */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family:'Lexend Deca', sans-serif;
+  font-size: 16px;
+  background-color: $veryLightGray;
+  display: flex;
+  justify-content: center;
+  h1{
+    font-family:'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: $veryLightGray;
+  }
+  p{
+    color: $transparentWhite;
+  }
+}
+.wrapper{
+  width: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 2em 0;
+}
+section{
+  padding: 2.5em;
+  h1{
+    margin: .5em 0;
+  }
+  p{
+    margin-bottom: 1.5em;
+  }
+}
+.sedans{
+  background-color: $brightOrange;
+  .btn{
+    color: $brightOrange;
+  }
+}
+.suvs{
+  background-color: $darkCyan;
+  .btn{
+    color: $darkCyan;
+  }
+}
+.luxury{
+  background-color: $veryDarkCyan;
+  .btn{
+    color: $veryDarkCyan;
+  }
+}
+.btn{
+  padding: 1em;
+  background-color: $veryLightGray;
+  border-radius: 30px;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  &:hover{
+    background-color: transparent;
+    color: $veryLightGray;
+    outline: solid 2px $veryLightGray;
+  }
+}
+@media screen and (min-width: 550px) {
+  .wrapper{
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body{
+    height: 100vh;
+    align-items: center;
+  }
+  .wrapper{
+    display: flex;
+  }
+  .btn{
+    margin-top: 5em;
+    width: 60%;
+  }
+}
